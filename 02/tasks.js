@@ -78,10 +78,16 @@ function getUnique(arr) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getIntersection(first, second) {
+
+    function compareNumeric(a, b) {
+      if (a > b) return 1;
+      if (a < b) return -1;
+    }
+
   var answer = [];
 
-  first.sort();
-  second.sort();
+  first.sort(compareNumeric);
+  second.sort(compareNumeric);
 
   while(first.length !== 0 && second.length !==0) {
     if (first[0] > second[0]) {
@@ -94,7 +100,7 @@ function getIntersection(first, second) {
       second.shift();
     }
   }
-  return answer;
+  return answer.sort(compareNumeric);
 }
 
 /* ============================================= */
