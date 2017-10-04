@@ -48,7 +48,7 @@ function sum(x) {
     return result;
   }
 
-  return result;
+  return func;
 }
 
 /*= ============================================ */
