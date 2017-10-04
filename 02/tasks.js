@@ -45,6 +45,9 @@ function sum(x) {
  * @return {boolean}
  */
 function anagram(first, second) {
+  if(first.split('').sort().join('') === second.split('').sort().join('')) {
+    return true;
+  }
   return false;
 }
 
@@ -57,7 +60,15 @@ function anagram(first, second) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getUnique(arr) {
-  return [];
+  var answer = [];
+
+  answer.push(arr[0]);
+  for(let i = 1; i < arr.length; i++){
+    if(answer.indexOf(arr[i]) === -1){
+      answer.push(arr[i]);
+    }
+  }
+  return  answer.sort();
 }
 
 /**
@@ -67,7 +78,23 @@ function getUnique(arr) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getIntersection(first, second) {
-  return [];
+  var answer = [];
+
+  first.sort();
+  second.sort();
+
+  while(first.length !== 0 && second.length !==0) {
+    if (first[0] > second[0]) {
+      second.shift();
+    } else if (first[0] < second[0]) {
+      first.shift();
+    } else {
+      answer.push(first[0]);
+      first.shift();
+      second.shift();
+    }
+  }
+  return answer;
 }
 
 /* ============================================= */
