@@ -3,11 +3,9 @@
  * Доп. задание: предложите несколько вариантов решения.
  */
 function timer(logger = console.log) {
-    let i = 0;
-    let timerId = setTimeout(function go() {
-        logger(i);
-        if (i < 10) setTimeout(go, 100);
-        i++;
+    for (var i = 0; i < 10; i++) {
+        setTimeout(() => {
+            logger(i);
     }, 100);
   }
 }
