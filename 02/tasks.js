@@ -33,17 +33,7 @@ function customBind(func, context, ...args) {
  * sum :: void -> Number
  */
 function sum(x) {
-  let result = x;
-
-  function func(y) {
-    result += y;
-    return func;
-  }
-
-  func.toString = function() {
-    return result;
-  }
-  return func;
+  return 0;
 }
 
 /*= ============================================ */
