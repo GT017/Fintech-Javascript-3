@@ -43,11 +43,6 @@ function sum(x) {
   func.toString = function() {
     return result;
   }
-
-  func.valueOf = function() {
-    return result;
-  }
-
   return func;
 }
 
