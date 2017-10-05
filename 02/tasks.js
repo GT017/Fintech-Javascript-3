@@ -35,15 +35,16 @@ function customBind(func, context, args) {
  * sum :: void -> Number
  */
 function sum(x) {
-  let result = x;
 
-  if(x === undefined) {
+   if(x === undefined) {
     return 'Incorrect data!';
   }
 
+  let result = x;
+
   return function func(y) {
     if(y === undefined) {
-      return 'Incorrect data!';
+      return result;
     }
     result += y;
     return func;
