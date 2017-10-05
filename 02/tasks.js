@@ -3,10 +3,12 @@
  * Доп. задание: предложите несколько вариантов решения.
  */
 function timer(logger = console.log) {
-    for (var i = 0; i < 10; i++) {
-        setTimeout(() => {
-            logger(i);
-    }, 100);
+  for (var i = 0; i < 10; i++) {
+    (function(e) {
+      setTimeout(function() {
+        logger(e);
+      }, 100);
+    })(i);
   }
 }
 
