@@ -121,7 +121,23 @@ function getIntersection(first, second) {
  * @return {boolean}
  */
 function isIsomorphic(left, right) {
+  if(left.length !== right.length) {
+    return false;
+  }
 
+  let flag = 0;
+
+   for(let i = 0; i < left.length; i++) {
+    if(left[i] !== right[i]){
+      flag++;
+    }
+  }
+
+  if(flag <= 1) {
+    return true;
+  }
+
+  return false;
 }
 
 module.exports = {
