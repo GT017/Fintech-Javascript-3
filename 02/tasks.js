@@ -22,11 +22,7 @@ function timer(logger = console.log) {
  * @return {Function} функция с нужным контекстом
  */
 function customBind(func, context, args) {
- var bindArgs = [].slice.call(arguments, 2);
-  return function() {
-    var funcArgs = [].slice.call(arguments);
-    return func.apply(context, bindArgs.concat(funcArgs));
-  }
+
 }
 
 /*= ============================================ */
@@ -39,7 +35,19 @@ function customBind(func, context, args) {
  * sum :: void -> Number
  */
 function sum(x) {
-  return 0;
+  let result = x;
+
+  if(x === undefined) {
+    return 'Incorrect data!';
+  }
+
+  return function func(y) {
+    if(y === undefined) {
+      return 'Incorrect data!';
+    }
+    result += y;
+    return func;
+  }
 }
 
 /*= ============================================ */
