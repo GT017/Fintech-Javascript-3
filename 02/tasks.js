@@ -4,9 +4,11 @@
  */
 function timer(logger = console.log) {
   for (var i = 0; i < 10; i++) {
-      setTimeout(function (i) {
-          logger(i);
-      }(i), 100);
+    (function(i) {
+      setTimeout(() => {
+        logger(i);
+      }, 100);
+    })(i);
   }
 }
 
