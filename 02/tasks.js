@@ -25,7 +25,7 @@ function customBind(func, context, args) {
  var bindArgs = [].slice.call(arguments, 2);
   return function() {
     var fnArgs = [].slice.call(arguments);
-    return fn.apply(context, bindArgs.concat(fnArgs));
+    return func.apply(context, bindArgs.concat(fnArgs));
   }
 }
 
