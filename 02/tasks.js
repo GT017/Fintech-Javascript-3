@@ -5,7 +5,7 @@
 function timer(logger = console.log) {
   for (var i = 0; i < 10; i++) {
     (function(i) {
-      setTimeout(function() {
+      setTimeout(() => {
         logger(i);
       }, 100);
     })(i);
