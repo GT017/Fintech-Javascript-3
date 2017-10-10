@@ -8,7 +8,9 @@
 * @return {Promise} промис с нужным поведением
 */
 function rejectOnTimeout(promise, timeoutInMilliseconds) {
-  return Promise.resolve(null);
+  promise.then(setTimeout(()=> {return Promise.resolve(null);}),
+    timeoutInMilliseconds), ()=> {return Promise.reject(new Error('timeout_error'));};
+  //return Promise.resolve(null);
 }
 
 module.exports = rejectOnTimeout;
