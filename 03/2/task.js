@@ -8,8 +8,8 @@
 * @return {Promise} промис с нужным поведением
 */
 function rejectOnTimeout(promise, timeoutInMilliseconds) {
-  promise.then(setTimeout(()=> {return Promise.resolve(null);}),
-    timeoutInMilliseconds), ()=> {return Promise.reject(new Error('timeout_error'));};
+  return promise.then(setTimeout(()=> {return Promise.resolve(null);}),
+    timeoutInMilliseconds), ()=> {return Promise.reject(new Error("timeout_error"));}
   //return Promise.resolve(null);
 }
 
