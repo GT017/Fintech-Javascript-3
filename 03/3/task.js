@@ -8,11 +8,13 @@
 function promiseAll(promises) {
   return new Promise((resolve, reject) => {
     const arrayOfResults = [];
+    let cnt = 0;
 
     promises.forEach((item, ind) => {
       item.then(result => {
         arrayOfResults[ind] = result;
-        if (arrayOfResults.length === promises.length) {
+        cnt++;
+        if (cnt === promises.length) {
           resolve(arrayOfResults);
         }
       }, error => reject(error));
