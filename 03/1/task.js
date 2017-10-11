@@ -23,3 +23,4 @@ class NumberAndString {
 }
 
 module.exports = NumberAndString;
+
