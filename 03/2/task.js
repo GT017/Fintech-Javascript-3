@@ -11,7 +11,8 @@ function rejectOnTimeout(promise, timeoutInMilliseconds) {
   return new Promise((resolve, reject) => {
     promise.then(result => resolve(result), error => reject(error));
     setTimeout(() => reject('timeout_error'),timeoutInMilliseconds);
-  };);
+  };
+  );
 }
 
 module.exports = rejectOnTimeout;
