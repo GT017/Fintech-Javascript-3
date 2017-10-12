@@ -4,9 +4,11 @@
  */
 function timer(logger = console.log) {
   for (var i = 0; i < 10; i++) {
-    setTimeout(() => {
-      logger(i);
-    }, 100);
+    (function(i) {
+      setTimeout(() => {
+        logger(i);
+      }, 100);
+    })(i);
   }
 }
 
@@ -20,7 +22,9 @@ function timer(logger = console.log) {
  * @return {Function} функция с нужным контекстом
  */
 function customBind(func, context, ...args) {
-
+  return function(...argums) {
+    return func.apply(context, args.concat(argums));
+  };
 }
 
 /*= ============================================ */
@@ -33,7 +37,20 @@ function customBind(func, context, ...args) {
  * sum :: void -> Number
  */
 function sum(x) {
-  return 0;
+
+  if (x === undefined) {
+    return 0;
+  }
+
+  let result = x;
+
+  return function func(y) {
+    if (y === undefined) {
+      return result;
+    }
+    result += y;
+    return func;
+  }
 }
 
 /*= ============================================ */
@@ -45,7 +62,7 @@ function sum(x) {
  * @return {boolean}
  */
 function anagram(first, second) {
-  if(first.split('').sort().join('') === second.split('').sort().join('')) {
+  if (first.split('').sort().join('') === second.split('').sort().join('')) {
     return true;
   }
   return false;
@@ -63,8 +80,8 @@ function getUnique(arr) {
   var answer = [];
 
   answer.push(arr[0]);
-  for(let i = 1; i < arr.length; i++){
-    if(answer.indexOf(arr[i]) === -1){
+  for (let i = 1; i < arr.length; i++) {
+    if (answer.indexOf(arr[i]) === -1) {
       answer.push(arr[i]);
     }
   }
@@ -78,12 +95,17 @@ function getUnique(arr) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getIntersection(first, second) {
+  function compareNumeric(a, b) {
+    if (a > b) return 1;
+    if (a < b) return -1;
+  }
+
   var answer = [];
 
-  first.sort();
-  second.sort();
+  first.sort(compareNumeric);
+  second.sort(compareNumeric);
 
-  while(first.length !== 0 && second.length !==0) {
+  while (first.length !== 0 && second.length !== 0) {
     if (first[0] > second[0]) {
       second.shift();
     } else if (first[0] < second[0]) {
@@ -94,7 +116,7 @@ function getIntersection(first, second) {
       second.shift();
     }
   }
-  return answer;
+  return answer.sort(compareNumeric);
 }
 
 /* ============================================= */
@@ -113,7 +135,22 @@ function getIntersection(first, second) {
  * @return {boolean}
  */
 function isIsomorphic(left, right) {
+  if (left.length !== right.length) {
+    return false;
+  }
 
+  let flag = 0;
+
+  for (let i = 0; i < left.length; i++) {
+    if (left[i] !== right[i]) {
+      flag++;
+    }
+  }
+
+  if (flag <= 1) {
+    return true;
+  }
+  return false;
 }
 
 module.exports = {
