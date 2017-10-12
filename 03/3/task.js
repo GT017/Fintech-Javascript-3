@@ -8,16 +8,16 @@
 function promiseAll(promises) {
   return new Promise((resolve, reject) => {
     const arrayOfResults = [];
-    let cnt = 0;
+    let counter = 0;
 
     promises.forEach((item, ind) => {
       item.then(result => {
         arrayOfResults[ind] = result;
-        cnt++;
-        if (cnt === promises.length) {
+        counter++;
+        if (counter === promises.length) {
           resolve(arrayOfResults);
         }
-      }, error => reject(error));
+      }, reject());
     });
   });
 }
