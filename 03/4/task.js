@@ -7,8 +7,7 @@
 
 function promiseRace(promises) {
   return new Promise((resolve, reject) =>
-    promises.forEach(item => item.then(
-      result => resolve(result), reject)));
+    promises.forEach(item => item.then(resolve, reject)));
 }
 
 module.exports = promiseRace;
