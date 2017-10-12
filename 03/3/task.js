@@ -17,7 +17,7 @@ function promiseAll(promises) {
         if (counter === promises.length) {
           resolve(arrayOfResults);
         }
-      }, reject());
+      }, reject(new Error()));
     });
   });
 }
