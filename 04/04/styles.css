@@ -4,7 +4,9 @@ html {
   margin-right: auto;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Roboto Condensed", sans-serif;
   text-align: center;
 }
@@ -26,7 +28,6 @@ p {
   height: 100%;
 }
 
-
 img {
   max-width: 640px;
   max-height: 480px;
@@ -39,5 +40,5 @@ a:hover {
 }
 
 a:visited {
-  color:brown;
+  color: brown;
 }
