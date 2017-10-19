@@ -1,0 +1,19 @@
+li {
+    list-style-type: none;
+}
+
+ul > li::before {
+    content: "\2022";
+    color: yellow;
+    float: left;
+}
+
+ol {
+    counter-reset: item;
+}
+
+ol > li::before {
+    counter-increment: item;
+    content: counter(item) ". ";
+    color: blue;
+}

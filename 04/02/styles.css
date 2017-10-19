@@ -1,0 +1,67 @@
+.table_1 {
+    table-layout: fixed;
+    width: 30%;
+    word-break: break-all;
+}
+
+.table_1 thead th {
+    background-color: lightgreen;
+    border-bottom: 3px solid black;
+}
+
+.table_1 th,
+.table_1 td {
+    width: 15%;
+}
+
+.table_1 tr:nth-child(even) {
+    background-color: cornflowerblue;
+}
+
+.table_1 tr:nth-child(odd) {
+    background-color: coral;
+}
+
+.table_1 tbody tr:hover {
+    background-color: blanchedalmond;
+}
+
+.table_1 .name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+}
+
+.table_2{
+    border-spacing: 8px;
+}
+
+.table_2 td {
+    width: 40px;
+    height: 35px;
+    padding-left: 10px;
+}
+
+.table_2 .this {
+    background-color: #4db886;
+}
+
+.table_2 .little {
+    background-color: #29ddbb;
+}
+
+.table_2 .piggy {
+    background-color: #2be6e4;
+}
+
+.table_2 .went {
+    background-color: #2ccbf5;
+}
+
+.table_2 .to {
+    background-color: #29ddba;
+}
+
+.table_2 .market {
+    background-color: #2aa8fc;
+}
