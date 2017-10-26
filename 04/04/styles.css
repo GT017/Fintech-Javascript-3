@@ -1,0 +1,44 @@
+html {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto Condensed", sans-serif;
+  text-align: center;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+.iframe {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: calc(100% * 9 / 16);
+}
+
+.map,
+.youtube {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  max-width: 640px;
+  max-height: 480px;
+  width: 100%;
+  height: 100%;
+}
+
+a:hover {
+  color: red;
+}
+
+a:visited {
+  color: brown;
+}
