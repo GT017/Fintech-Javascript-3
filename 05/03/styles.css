@@ -15,7 +15,7 @@
   padding-left: 18px;
 }
 
-/* Cafe*/
+/* Cafe */
 .rectangle-cafe {
   display: flex;
   width: 78px;
@@ -29,20 +29,20 @@
   margin-bottom: 12px;
   margin-right: 12px;
 }
-    
+
 .cafe {
   display: flex;
   margin-left: 11px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-} 
+}
 
 .cafe-item {
   font-family: Roboto;
   text-decoration: none;
   font-size: 13px;
-  color: #333333;
+  color: #333;
   margin-top: 14px;
   margin-bottom: 13px;
   margin-right: 12px;
@@ -70,20 +70,20 @@
   align-items: center;
   margin-bottom: 12px;
 }
-    
+
 .internet {
   display: flex;
   margin-left: 11px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-} 
+}
 
 .internet-item {
   font-family: Roboto;
   text-decoration: none;
   font-size: 13px;
-  color: #333333;
+  color: #333;
   margin-top: 14px;
   margin-bottom: 13px;
   margin-right: 12px;
@@ -98,8 +98,7 @@
   margin-bottom: 13px;
 }
 
-
-/* Phone*/
+/* Phone */
 .rectangle-phone {
   display: flex;
   width: 102px;
@@ -114,20 +113,20 @@
   margin-right: 12px;
   margin-left: 12px;
 }
-    
+
 .phone {
   display: flex;
   margin-left: 11px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-} 
+}
 
 .phone-item {
   font-family: Roboto;
   text-decoration: none;
   font-size: 13px;
-  color: #333333;
+  color: #333;
   margin-top: 14px;
   margin-bottom: 13px;
   margin-right: 12px;
@@ -156,20 +155,20 @@
   margin-bottom: 12px;
   margin-right: 12px;
 }
-    
+
 .auto {
   display: flex;
   margin-left: 11px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-} 
+}
 
 .auto-item {
   font-family: Roboto;
   text-decoration: none;
   font-size: 13px;
-  color: #333333;
+  color: #333;
   margin-top: 14px;
   margin-bottom: 13px;
   margin-right: 12px;
@@ -198,20 +197,20 @@
   margin-bottom: 12px;
   margin-right: 12px;
 }
-    
+
 .common {
   display: flex;
   margin-left: 11px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-} 
+}
 
 .common-item {
   font-family: Roboto;
   text-decoration: none;
   font-size: 13px;
-  color: #333333;
+  color: #333;
   margin-top: 14px;
   margin-bottom: 13px;
   margin-right: 12px;
@@ -240,20 +239,20 @@
   margin-bottom: 12px;
   margin-right: 12px;
 }
-    
+
 .clothes {
   display: flex;
   margin-left: 11px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-} 
+}
 
 .clothes-item {
   font-family: Roboto;
   text-decoration: none;
   font-size: 13px;
-  color: #333333;
+  color: #333;
   margin-top: 14px;
   margin-bottom: 13px;
   margin-right: 12px;
@@ -280,14 +279,14 @@
   margin-bottom: 12px;
   margin-right: 12px;
 }
-    
+
 .shop {
   display: flex;
   margin-left: 9px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-} 
+}
 
 .shop-item {
   font-family: Roboto;
@@ -296,7 +295,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 13px;
-  color: #333333;
+  color: #333;
   margin-top: 14px;
   margin-bottom: 13px;
   margin-right: 12px;
