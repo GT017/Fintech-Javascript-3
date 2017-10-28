@@ -1,21 +1,92 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="styles.css">
     <title>Задание 2</title>
 </head>
 <body>
-<h1>Пустая страница, в ней создать 2 таблицы. Первая, таблица продуктов(Название продукта, Происхождение, Белки, Жиры, Углеводы):</h1>
-<ul>
-    <li> 5 ячеек в строке равной ширины </li>
-    <li> Если контент не вмещается в ячейку, она не раздвигается, в колонке Название продукта контент в одну строку и скрывается с точками, в колонке Происхождение контент становится многострочным. </li>
-    <li> Фон рядов должен чередоваться </li>
-    <li> По наведению на ряд фон должен меняться </li>
-    <li> Бордеров быть вообще не должно </li>
-    <li> Thead с нижним бордером и цветным фоном </li>
-</ul>
+<!--Table_1-->
+<table class="table_1">
+    <thead>
+    <tr>
+        <th class="name">Название продукта</th>
+        <th>Происхождение</th>
+        <th>Белки</th>
+        <th>Жиры</th>
+        <th>Углеводы</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="name">Название продукта 1111111111111111111111111111111111111111111111111111111111111111</td>
+        <td>Происхождение 1</td>
+        <td>10</td>
+        <td>20</td>
+        <td>30</td>
+    </tr>
+    <tr>
+        <td class="name">Название продукта 2</td>
+        <td>Происхождение 2</td>
+        <td>15</td>
+        <td>25</td>
+        <td>35</td>
+    </tr>
+    <tr>
+        <td class="name">Название продукта 3</td>
+        <td>Происхождение 3</td>
+        <td>20</td>
+        <td>30</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td class="name">Название продукта 4</td>
+        <td>Происхождение 4</td>
+        <td>25</td>
+        <td>35</td>
+        <td>15</td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<br>
+<br>
+<!--Table_2-->
+<table class="table_2">
+    <tr>
+        <td class="this">This</td>
+        <td class="little">Little</td>
+        <td class="piggy">Piggy</td>
+        <td class="went">Went</td>
+        <td class="to">To</td>
+        <td class="market">Market</td>
+    </tr>
+    <tr>
+        <td class="this" colspan="2">This</td>
+        <td class="little">Little</td>
+        <td class="piggy">Piggy</td>
+        <td class="went">Went</td>
+        <td class="to">To</td>
+    </tr>
+    <tr>
+        <td class="this" colspan="4">This</td>
+        <td class="little" rowspan="3">Little</td>
+        <td class="piggy">Piggy</td>
+    </tr>
+    <tr>
+        <td class="this" rowspan="2">This</td>
+        <td class="little">Little</td>
+        <td class="piggy">Piggy</td>
+        <td class="went">Went</td>
+        <td class="to">To</td>
+    </tr>
+    <tr>
+        <td class="this">Little</td>
+        <td class="little">Piggy</td>
+        <td class="piggy">Went</td>
+        <td class="went">To</td>
+    </tr>
+</table>
 
-<h1> Вторая, как на картинке, отступ между ячейками 8px</h1>
-<image src="https://habrastorage.org/webt/59/e3/06/59e306153cd88184926845.png"></image>
 </body>
 </html>
