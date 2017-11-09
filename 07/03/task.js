@@ -5,7 +5,7 @@
 function throttle(time, callback) {
   let state = false;
 
-  return function () {
+  return function() {
     if (state) {
       return;
     }
