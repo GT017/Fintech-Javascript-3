@@ -5,11 +5,11 @@
 function throttle(time, callback) {
   let state = false;
 
-  return function(...args) {
+  return function() {
     if (state) {
       return;
     }
-    callback.apply(this, args);
+    callback.apply(this, arguments);
     state = true;
     setTimeout(function() {
       state = false;
