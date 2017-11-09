@@ -4,16 +4,17 @@
  */
 function throttle(time, callback) {
   let state = false;
-  return function() {
+
+  return function(...args) {
     if (state) {
       return;
     }
-    callback.apply(this, arguments);
+    callback.apply(this, args);
     state = true;
     setTimeout(function() {
       state = false;
     }, time);
-  }
+  };
 }
 
 module.exports = { throttle };

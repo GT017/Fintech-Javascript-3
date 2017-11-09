@@ -11,7 +11,8 @@ function doubleClick(element, doubleClickHandler, timeDistance) {
   let prevTimeStamp = timeDistance;
 
   element.addEventListener('click', event => {
-    const currTimeStamp = event.timeStamp;
+    const currTimeStamp = event.timeStamp
+
     if (currTimeStamp - prevTimeStamp < timeDistance) {
       doubleClickHandler();
     } else {
@@ -19,5 +20,6 @@ function doubleClick(element, doubleClickHandler, timeDistance) {
     }
   });
 }
+
 const button = document.querySelector('.button');
 doubleClick(button, addToList, 500);
