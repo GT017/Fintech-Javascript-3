@@ -25,7 +25,7 @@ function setCursorPosition(pos, elem) {
 function mask(event) {
   let matrix = '+7 (___) ___-__-__';
   let i = 0;
-  const  def = matrix.replace(/\D/g, '');
+  const def = matrix.replace(/\D/g, '');
   let val = this.value.replace(/\D/g, '');
 
   if (def.length >= val.length) {

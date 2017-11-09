@@ -22,4 +22,5 @@ function doubleClick(element, doubleClickHandler, timeDistance) {
 }
 
 const button = document.querySelector('.button');
+
 doubleClick(button, addToList, 500);
