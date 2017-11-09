@@ -10,7 +10,7 @@ function addToList() {
 function doubleClick(element, doubleClickHandler, timeDistance) {
   let prevTimeStamp = timeDistance;
 
-  element.addEventListener('click', (event) => {
+  element.addEventListener('click', event => {
     const currTimeStamp = event.timeStamp;
     if (currTimeStamp - prevTimeStamp < timeDistance) {
       doubleClickHandler();

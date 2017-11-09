@@ -1,8 +1,8 @@
 const inputElement = document.querySelector('.phone');
 const linkElement = document.querySelector('.link');
 
-function linkUpdate () {
-  if(inputElement.value.length === '+7 (___) ___-__-__'.length) {
+function linkUpdate() {
+  if (inputElement.value.length === '+7 (___) ___-__-__'.length) {
     linkElement.href = `tel:${inputElement.value}`;
     linkElement.textContent = `Позвонить на ${inputElement.value}`;
   }
@@ -27,7 +27,9 @@ function mask(event) {
     def = matrix.replace(/\D/g, ""),
     val = this.value.replace(/\D/g, "");
 
-  if (def.length >= val.length) val = def;
+  if (def.length >= val.length) {
+    val = def;
+  }
   matrix = matrix.replace(/[_\d]/g, function(a) {
     return val.charAt(i++) || "_";
   });
@@ -35,9 +37,9 @@ function mask(event) {
   this.value = matrix;
   i = matrix.lastIndexOf(val.substr(-1));
 
-  ((i < matrix.length) && (matrix != this.defaultValue)) ? i++ : i = matrix.indexOf("_");
+  ((i < matrix.length) && (matrix !== this.defaultValue)) ? i++ : i = matrix.indexOf("_");
   if (val.length > 11) {
-    setCursorPosition('+7 (___) ___-__-__'.length,this);
+    setCursorPosition('+7 (___) ___-__-__'.length, this);
   } else {
     setCursorPosition(i, this);
   }
